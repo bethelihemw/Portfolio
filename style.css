@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100vh;
+    background: url("stars.jpg") no-repeat center/cover;
+    padding: 70px 5%;
+}
+/* navbar css */
+.container{
+    position: relative;
+    height: 100%;
+    border: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, .152);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+}
+@keyframes  zoom-in  {
+    100% {
+        transform: scale(1);
+    }
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    /* background: slateblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.animated{
+    transform: translateY(30px);
+    opacity:0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: .51s;
+}
+@keyframes slide-in {
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.logo{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.navbar a:hover,
+.navbar a:active
+ {
+    border-color: white;
+}
+
+/* sectio one css */
+
+.home{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+    color: black;
+    padding: 50px 5% 0;
+    animation-delay: 1.5s;
+
+}
+.home-detail h1{
+    font-size: 35px;
+    line-height: 1.7;
+}
+.home-detail h2{
+    font-size: 25px;
+}
+.home-detail p{
+    line-height: 1.3;
+    margin: 10px 0 20px;
+}
+.home-detail  .download{
+    display: flex; 
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    padding:10px 30px ; 
+    
+    border:2px solid white;
+    border-radius: 8px;
+    background: transparent;
+    color: black;
+    text-align: none;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+}
+.btn:hover{
+    background: white;
+    box-shadow: none;
+    color: black;
+
+}
+
+.home-detail .social-icons {
+    margin-left: 20px;
+}
+.home-detail .social-icons a{
+    display: inline-block;
+    padding: 8px;
+    border:2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: .5s;
+
+}
+.home-detail .social-icons a:hover{
+    background: white;
+    box-shadow: 0 0 10px white;
+    color: gray;
+}
+.home-img .img-box{
+    position: relative;
+    width:15vw;
+    height:30vh;
+    border:2px solid white;
+    border-radius: 50%;
+    box-shadow:0 0 20px white;
+    overflow: hidden;
+}
+.home-img .img-box img{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+}
