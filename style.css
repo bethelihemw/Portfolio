@@ -7,7 +7,7 @@
 body{
     height: 100vh;
     background: url("stars.jpg") no-repeat center/cover;
-    padding: 70px 5%;
+    padding: 22px 2%;
 }
 /* navbar css */
 .container{
@@ -154,4 +154,456 @@ header{
     display: flex;
     width: 100%;
     object-fit: cover;
+}
+
+/* About section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 100px 5%;
+    color: black;
+    animation-delay: 11.5s;
+}
+
+.about-content {
+    
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-content h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+
+
+/*  service */
+
+/* Service Section */
+.service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 100px 5%;
+    color: black;
+}
+
+.service-content {
+    text-align: center;
+    max-width: 900px;
+}
+
+.service-content h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.service-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.service-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 30px 20px;
+    width: 260px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.service-box i {
+    font-size: 35px;
+    color: white;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.service-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* Portfolio Section */
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 100px 5%;
+    color: black;
+}
+
+.portfolio-content {
+    text-align: center;
+    max-width: 1000px;
+}
+
+.portfolio-content h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.portfolio-content p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio-item {
+    width: 280px;
+    background-color: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.portfolio-item h2 {
+    padding: 15px;
+    font-size: 18px;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+
+/* Contact Section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 100px 5%;
+    color: black;
+}
+
+.contact-content {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-content h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    color: black;
+    outline: none;
+    font-size: 15px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(0,0,0,0.6);
+}
+
+.contact-form .btn {
+    border: 2px solid white;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+}
+
+.contact-form .btn:hover {
+    background: white;
+    color: black;
+}
+
+/* ---------- Large Desktop (1200px and above) ---------- */
+@media (min-width: 1200px) {
+    .home-detail h1 {
+        font-size: 45px;
+    }
+    .home-detail h2 {
+        font-size: 28px;
+    }
+    .service-box, .portfolio-item {
+        width: 300px;
+    }
+}
+
+/* ---------- Tablet (768px – 1199px) ---------- */
+@media (max-width: 1199px) and (min-width: 768px) {
+    body {
+        padding: 50px 3%;
+    }
+
+    header {
+        padding: 20px 3%;
+    }
+
+    .navbar a {
+        margin-left: 25px;
+        font-size: 16px;
+    }
+
+    .home {
+        flex-direction: row;
+        gap: 30px;
+        padding: 70px 5% 0;
+    }
+
+    .home-detail h1 {
+        font-size: 32px;
+    }
+
+    .home-detail h2 {
+        font-size: 22px;
+    }
+
+    .home-img .img-box {
+        width: 15vw;
+        height: 25vh;
+    }
+
+    .service-boxes,
+    .portfolio-grid {
+        gap: 20px;
+    }
+
+    .service-box, .portfolio-item {
+        width: 45%;
+    }
+
+    .about-content,
+    .contact-content {
+        padding: 0 5%;
+    }
+}
+
+/* ---------- Mobile (below 768px) ---------- */
+@media (max-width: 767px) {
+    body {
+        padding: 30px 3%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 3%;
+    }
+
+    .logo {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin: 0;
+        border-bottom: none;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 60px 5% 0;
+        gap: 20px;
+    }
+
+    .home-detail h1 {
+        font-size: 28px;
+    }
+
+    .home-detail h2 {
+        font-size: 20px;
+    }
+
+    .home-detail p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .home-img .img-box {
+        width: 30vw;
+        height: 35vh;
+    }
+
+    .about-content,
+    .service-content,
+    .portfolio-content,
+    .contact-content {
+        padding: 0 3%;
+    }
+
+    .service-boxes,
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box,
+    .portfolio-item {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form .btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+/* =====================
+   HAMBURGER MENU STYLE
+   ===================== */
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 200;
+}
+
+/* Hide the navbar by default on small screens */
+@media (max-width: 767px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 30px;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 40%;
+        height: auto;
+        background: rgba(3, 0, 3, 0.418);
+        border-left: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px 0 0 15px;
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        transition: right 0.4s ease;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: none;
+        margin: 5px 0;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+}
+
+
+/* Fade-in animation for all pages */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Delay for navbar and main content */
+header {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.page-content {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
 }

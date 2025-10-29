@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">BW</a>
+            <div class="menu-icon" id="menu-icon">
+                <i class="ri-menu-line"></i>
+            </div>
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Service</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <section class="service page-content">
+            <div class="service-content">
+                <h1>My Services</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam eveniet numquam officiis consectetur natus illum 
+                    nostrum nihil voluptate reiciendis totam tempora, incidunt 
+                    sequi distinctio laborum repellat. Sunt dicta expedita aliquid?
+                </p>
+
+                <div class="service-boxes">
+                    <div class="service-box">
+                        <i class="ri-code-s-slash-line"></i>
+                        <h2>Web Development</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.</p>
+                    </div>
+
+                    <div class="service-box">
+                        <i class="ri-smartphone-line"></i>
+                        <h2>App Development</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, vel.</p>
+                    </div>
+
+                    <div class="service-box">
+                        <i class="ri-brush-line"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, distinctio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+    const icon = menuIcon.querySelector('i');
+
+    menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        icon.classList.toggle('ri-close-line');
+        icon.classList.toggle('ri-menu-line');
+    });
+
+    // Close menu when a link is clicked (for phones)
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('active');
+            icon.classList.add('ri-menu-line');
+            icon.classList.remove('ri-close-line');
+        });
+    });
+</script>
+
+</body>
+</html>

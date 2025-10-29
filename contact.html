@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Portfolio]</title>
+    <title>Contact | BW</title>
     <link rel="stylesheet" href="style.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
-        <header class="animated">
-            <a href="#" class="logo"> BW</a>
+        <header>
+            <a href="index.html" class="logo">BW</a>
             <div class="menu-icon" id="menu-icon">
                 <i class="ri-menu-line"></i>
             </div>
@@ -23,30 +19,23 @@
                 <a href="about.html">About</a>
                 <a href="service.html">Service</a>
                 <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="active">Contact</a>
             </nav>
         </header>
-        <section class="home animated">
-            <div class="home-detail">
-                <h1>Bethelihem Wondimneh</h1>
-                <h2>Full Stack Developer</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Ut aspernatur earum sit quaerat nisi rem dolorem neque
-                    illo sed minus amet, accusantium debitis maxime
-                    fugit numquam, commodi nobis voluptates beatae?
+
+        <section class="contact page-content">
+            <div class="contact-content">
+                <h1>Contact Me</h1>
+                <p>
+                    Have a project or idea you’d like to discuss? Fill out the form below and let’s get in touch!
                 </p>
-                <div class="download">
-                    <a href="#" class="btn"> Download Cv</a>
-                    <div class="social-icons">
-                        <a href="#"><i class="ri-github-fill"></i></a>
-                        <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="home-img">
-                 <div class="img-box">
-                    <img src="image.jpg" alt="">
-                 </div>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
         </section>
     </div>

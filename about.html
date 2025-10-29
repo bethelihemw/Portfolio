@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">BW</a>
+            <div class="menu-icon" id="menu-icon">
+                <i class="ri-menu-line"></i>
+            </div>
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Service</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <section class="about page-content">
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Vitae quibusdam voluptas neque dolores repellendus at fugit 
+                    veniam porro quasi ab enim, itaque corporis, dolorem facere 
+                    ipsum iure harum recusandae perspiciatis. Temporibus eveniet 
+                    commodi animi accusantium deleniti numquam expedita quod iste, 
+                    adipisci optio! Odio perferendis amet id ipsum nostrum pariatur 
+                    deserunt molestiae officia, nisi distinctio neque dolore modi 
+                    obcaecati corrupti voluptate?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Reprehenderit at fugit earum voluptatibus voluptas tenetur 
+                    laborum temporibus sunt nesciunt, unde sapiente officia 
+                    placeat corporis quia similique aliquam architecto! 
+                    Reiciendis, minima.
+                </p>
+            </div>
+        </section>
+    </div>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+        const icon = menuIcon.querySelector('i');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            icon.classList.toggle('ri-close-line');
+            icon.classList.toggle('ri-menu-line');
+        });
+
+        // Close menu when a link is clicked (for phones)
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                icon.classList.add('ri-menu-line');
+                icon.classList.remove('ri-close-line');
+            });
+        });
+    </script>
+
+</body>
+</html>
