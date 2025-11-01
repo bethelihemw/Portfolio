@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,17 @@
     <title>Contact | BW</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "1ded9-xUov4wUNCpg",
+        });
+    })();
+    </script>
+    <script src="script.js"></script> -->
 </head>
 <body>
     <div class="container">
@@ -23,18 +35,25 @@
             </nav>
         </header>
 
-        <section class="contact page-content">
+        <section id="contact" class="contact page-content">
             <div class="contact-content">
                 <h1>Contact Me</h1>
                 <p>
                     Have a project or idea you’d like to discuss? Fill out the form below and let’s get in touch!
                 </p>
 
-                <form class="contact-form">
+                <form class="contact-form" action="https://formsubmit.co/wondimnehbethelihem@gmail.com" method="POST">
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email" required>
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <textarea placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn">Send Message</button>
+                    
+                     <!-- <button type="submit" class="btn" onclick="sendMail()">Send Message</button> -->
+                    <!-- <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button> -->
                 </form>
             </div>
         </section>
