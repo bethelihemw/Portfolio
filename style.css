@@ -68,15 +68,16 @@ header{
     border-bottom: 2px solid transparent;
     transition: .5s;
 }
-
-.navbar a:hover,
-.navbar a:active
- {
-    border-color: white;
+.navbar a:hover {
+  border-bottom: 3px solid #c7a17a; /* optional hover effect */
 }
 
+.navbar a.active {
+  border-bottom: 3px solid #c7a17a; /* highlight the active page */
+  font-weight: bold;
+  color: white;
+}
 /* sectio one css */
-
 .home{
     display: flex;
     align-items: center;
@@ -85,6 +86,7 @@ header{
     color: white;
     padding: 100px 5% 0;
     animation-delay: 1.5s;
+    /* min-height: 330px; */
 
 }
 .home-detail h1{
@@ -224,6 +226,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: stretch;
+    margin: 24px;
     /* flex-wrap: wrap; */
     gap: 30px;
 }
@@ -399,6 +402,17 @@ header{
     .service-box, .portfolio-item {
         width: 300px;
     }
+     .home-img .img-box {
+        width: 20vw;
+        height: 45vh;
+    }
+    .home {
+        flex-direction: row;
+        gap: 3px;
+        padding: 7px 1% 0;
+    }
+
+
 }
 
 /* ---------- Tablet (768px – 1199px) ---------- */
@@ -418,8 +432,8 @@ header{
 
     .home {
         flex-direction: row;
-        gap: 30px;
-        padding: 70px 5% 0;
+        gap: 3px;
+        padding: 7px 1% 0;
     }
 
     .home-detail h1 {
@@ -431,8 +445,9 @@ header{
     }
 
     .home-img .img-box {
-        width: 15vw;
-        height: 25vh;
+        padding-right: 1px;
+        width: 25vw;
+        height: 40vh;
     }
 
     .service-boxes,
@@ -538,17 +553,17 @@ header{
 /* =====================
    HAMBURGER MENU STYLE
    ===================== */
-
 .menu-icon {
     display: none;
     font-size: 28px;
     color: white;
     cursor: pointer;
     z-index: 200;
+    /* background-color: black; */
 }
 
 /* Hide the navbar by default on small screens */
-@media (max-width: 767px) {
+@media (max-width: 800px) {
     .menu-icon {
         display: block;
         position: absolute;
@@ -556,13 +571,17 @@ header{
         right: 30px;
     }
 
+    .home{
+        min-height: 200px;
+        overflow-x: none;
+    }
     .navbar {
         position: fixed;
         top: 60px;
         right: -100%;
         width: 40%;
         height: auto;
-        background: rgba(3, 0, 3, 0.418);
+        background: rgba(3, 0, 3, .871);
         border-left: 2px solid rgba(255, 255, 255, 0.2);
         border-radius: 15px 0 0 15px;
         backdrop-filter: blur(15px);
@@ -587,8 +606,6 @@ header{
         right: 0;
     }
 }
-
-
 /* Fade-in animation for all pages */
 @keyframes fadeInUp {
     0% {
@@ -611,9 +628,74 @@ header {
     animation: fadeInUp 0.8s ease forwards;
     animation-delay: 0.2s;
 }
-
 .page-content {
     animation: fadeInUp 1s ease forwards;
     animation-delay: 0.6s;
     opacity: 0;
+}
+
+
+html, body {
+  overflow-x: hidden;
+}
+/* ✅ Home section should take full height and grow with content */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* allows content to wrap nicely on smaller screens */
+  min-height: 100vh; /* ensures it fills the screen at least */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+/* ✅ Image and details layout adjustments */
+.home-img {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+}
+.home-detail {
+  flex: 1 1 400px;
+  padding: 20px;
+  min-width: 280px;
+}
+/* ✅ Responsive fix for screens smaller than 800px */
+@media (max-width: 850px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto; /* allows it to grow naturally when content increases */
+    padding-bottom: 3rem;
+  }
+  .home-img {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* prevent navbar from causing overflow */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+}
+
+/* @media(max-width: 700px){
+
+    .home-img {
+    height: 100px;
+    width: 200px;
+  }
+} */
+
+.bottom{
+    font-size: 8px;
+}
+
+.portfolio-item a{
+    color: white;
+    text-decoration: none;
 }
