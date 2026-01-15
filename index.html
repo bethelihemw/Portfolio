@@ -10,6 +10,41 @@
     rel="stylesheet"
 />
 
+
+<style>
+#typing-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border-right: 2px solid #fffdfa; /* blinking cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(40, end) infinite alternate, blink 0.7s infinite;
+}
+
+/* typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 320px; } /* adjust based on your text length */
+}
+
+/* blinking cursor */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+</style>
+
+<script>
+const typingText = document.getElementById("typing-text");
+const text = "Web Developer | UX/UI Designer";
+
+function startTyping() {
+  typingText.textContent = text;
+}
+startTyping();
+</script>
+
 </head>
 <body>
     <div class="container">
@@ -29,12 +64,12 @@
         <section class="home animated">
             <div class="home-img">
                  <div class="img-box">
-                    <img src="image.jpg" alt="">
+                    <img src="me.png" alt="">
                  </div>
             </div>
             <div class="home-detail">
-                <h1>Bethelihem Wondimneh</h1>
-                <h3>Full Stack Developer| UX/UI Designer </h3>
+                <h1><strong style="color: #e62284;">Bethelihem</strong> Wondimneh</h1>
+                <h5 id="typing-text">Web Developer | UX/UI Designer</h5>
                 <p>Experienced with technologies like JavaScript, React, Node.js, MongoDB. I enjoy building creative, and user-focused web applications
                 </p>
                 <div class="download">
